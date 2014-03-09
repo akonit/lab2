@@ -8,11 +8,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Category', 'url'=>array('index')),
-	array('label'=>'Manage Category', 'url'=>array('admin')),
+	array('label'=>'Список категорий', 'url'=>array('index')),
+	array('label'=>'Администрирование категорий', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Category</h1>
+<h1>Создать категорию продукта</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

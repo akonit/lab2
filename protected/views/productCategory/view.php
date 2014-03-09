@@ -11,7 +11,7 @@ $this->menu=array(
 	array('label'=>'Список назначений', 'url'=>array('index')),
 	array('label'=>'Назначить категорию продукту', 'url'=>array('create')),
 	array('label'=>'Обновить назначение', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Обновить назначение', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Удалить назначение', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>'Администрирование назначений', 'url'=>array('admin')),
 );
 ?>
@@ -22,7 +22,9 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		/*'id',*/
-		'pid',
-		'cid',
+		array('label'=>'Продукт', 'value'=>$model->p->name),
+		//'pid',
+		array('label'=>'Продукт', 'value'=>$model->c->name),
+		//'cid',
 	),
 )); ?>

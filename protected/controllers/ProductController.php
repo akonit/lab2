@@ -31,10 +31,10 @@ class ProductController extends Controller
 				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
-			/*array('allow', // allow authenticated user to perform 'create' actions
-				'actions'=>array(),
+			array('allow', // allow authenticated user to perform 'create' actions
+				'actions'=>array('opinion', 'updateMark'),
 				'users'=>array('@'),
-			),*/
+			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' and 'update' actions
 				'actions'=>array('admin', 'create', 'update', 'delete'),
 				'users'=>array('admin'),
@@ -50,6 +50,13 @@ class ProductController extends Controller
 	 * @param integer $id the ID of the model to be displayed
 	 */
 	public function actionView($id)
+	{
+		$this->render('view',array(
+			'model'=>$this->loadModel($id),
+		));
+	}
+
+	public function actionOpinion($id)
 	{
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
@@ -169,5 +176,20 @@ class ProductController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+
+	public function actionUpdateMark() 
+	{
+		$mark = Yii::app()->request->getPost('mark');
+		$id = Yii::app()->request->getPost('model');
+		$model=Product::model()->findByPk($id);
+		$model->mark = ($model->mark * $model->voters + $mark) / ($model->voters + 1);
+		$model->voters = $model->voters + 1;
+		if($model->save())
+				$this->redirect(array('view','id'=>$model->id));
+
+		$this->render('view',array(
+			'model'=>$model,
+		));
 	}
 }

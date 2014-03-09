@@ -32,9 +32,9 @@
 				array('label'=>'Продукты', 'url'=>array('/product')),
 				array('label'=>'Категории продуктов', 'url'=>array('/category')),
 				array('label'=>'Связь между продуктами и категориями', 'url'=>array('/productCategory')),
-				array('label'=>'Отзывы', 'url'=>array('/opinion')),
+				//array('label'=>'Отзывы', 'url'=>array('/opinion')),
 				array('label'=>'О нас', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Как связаться', 'url'=>array('/site/contact')),
+				//array('label'=>'Как связаться', 'url'=>array('/site/contact')),
 				array('label'=>'Залогиниться', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Разлогиниться ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),

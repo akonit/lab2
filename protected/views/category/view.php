@@ -16,7 +16,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>Категория продукта #<?php echo $model->id; ?></h1>
+<h1>Категория продукта <?php echo $model->name; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

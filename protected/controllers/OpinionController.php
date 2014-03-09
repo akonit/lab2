@@ -58,9 +58,9 @@ class OpinionController extends Controller
 
 	/**
 	 * Creates a new model.
-	 * If creation is successful, the browser will be redirected to the 'view' page.
+	 * If creation is successful, the browser will be redirected to product view page.
 	 */
-	public function actionCreate()
+	public function actionCreate($product)
 	{
 		$model=new Opinion;
 
@@ -70,9 +70,10 @@ class OpinionController extends Controller
 		if(isset($_POST['Opinion']))
 		{
                         $model->time=date('Y/m/d H:i:s');
+			$model->pid=$product;
 			$model->attributes=$_POST['Opinion'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('/product/view','id'=>$product));
 		}
 
 		$this->render('create',array(

@@ -36,7 +36,7 @@ class ProductCategoryController extends Controller
 				'users'=>array('@'),
 			),*/
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','index','view','create','update','delete'),
+				'actions'=>array('admin','index','view','create','update','delete', 'updatePid', 'updateCid'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -170,4 +170,16 @@ class ProductCategoryController extends Controller
 			Yii::app()->end();
 		}
 	}
+
+	/*public function actionUpdatePid()
+	{
+		$pid=$_POST['pid_ddl'];
+		echo CHtml::tag('input', array( 'type'=>'text' , 'value' => $pid));
+	}
+
+	public function actionUpdateCid()
+	{
+		$cid=$_POST['cid_ddl'];
+		echo CHtml::tag('input', array( 'type'=>'text' , 'value' => $cid));
+	}*/
 }

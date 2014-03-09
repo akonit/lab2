@@ -21,11 +21,17 @@
 	<?php echo CHtml::encode($data->mark); ?>
 	<br />
 
-	<!--<b><?php echo CHtml::encode($data->getAttributeLabel('voters')); ?>:</b>
-	<?php echo CHtml::encode($data->voters); ?>
-	<br />-->
-
-<!-- тут должен быть список отзывов -->
-
-
+	<b>
+        <?php 
+		$text_ct = "Категории продукта:  ";
+		$product_categories = $data->productCategories;
+		foreach($product_categories as $pct)
+		{
+			$ct = Category::model()->findByPk($pct->cid);
+			$text_ct = $text_ct . $ct->name . ", ";
+		}
+		echo substr($text_ct, 0, strlen($text_ct) - 2);
+		//echo CHtml::encode($data->getAttributeLabel('voters')); 
+	?></b>
+	<br />
 </div>

@@ -7,7 +7,7 @@
  * @property integer $id
  * @property string $name
  * @property string $description
- * @property integer $mark
+ * @property numeric $mark
  * @property integer $voters
  *
  * The followings are the available model relations:
@@ -33,7 +33,8 @@ class Product extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('name, description, mark, voters', 'required'),
-			array('mark, voters', 'numerical', 'integerOnly'=>true),
+			array('mark', 'numerical', 'integerOnly'=>false),
+			array('voters', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>128),
 			array('description', 'length', 'max'=>256),
 			// The following rule is used by search().

@@ -19,11 +19,11 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
+	<!--<div class="row">
 		<?php echo $form->labelEx($model,'pid'); ?>
 		<?php echo $form->textField($model,'pid'); ?>
 		<?php echo $form->error($model,'pid'); ?>
-	</div>
+	</div>-->
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'login'); ?>

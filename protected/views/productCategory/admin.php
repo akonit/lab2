@@ -8,8 +8,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List ProductCategory', 'url'=>array('index')),
-	array('label'=>'Create ProductCategory', 'url'=>array('create')),
+	array('label'=>'Список назначений', 'url'=>array('index')),
+	array('label'=>'Назначить категорию продукту', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Product Categories</h1>
+<h1>Администрирование категорий продукта</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -46,8 +46,16 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'filter'=>$model,
 	'columns'=>array(
 		/*'id',*/
-		'pid',
-		'cid',
+		//'pid',
+		array(
+		    'name'=>'pid',
+		    'value'=>array($model,'getProductName')
+		),
+		//'cid',
+		array(
+		    'name'=>'cid',
+		    'value'=>array($model,'getCategoryName')
+		),
 		array(
 			'class'=>'CButtonColumn',
 		),

@@ -748,3 +748,1720 @@ Stack trace:
 REQUEST_URI=/lab2/index.php?r=category
 HTTP_REFERER=http://localhost/lab2/index.php?r=site/login
 ---
+2014/03/08 22:46:55 [error] [php] Undefined variable: t (/var/www/lab2/protected/views/product/view.php:35)
+Stack trace:
+#0 /home/ann/yii/framework/web/CController.php(869): ProductController->renderFile()
+#1 /home/ann/yii/framework/web/CController.php(782): ProductController->renderPartial()
+#2 /var/www/lab2/protected/controllers/ProductController.php(56): ProductController->render()
+#3 unknown(0): ProductController->actionView()
+#4 /home/ann/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /home/ann/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /home/ann/yii/framework/web/filters/CFilterChain.php(133): ProductController->runAction()
+#8 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/ann/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): ProductController->filterAccessControl()
+#11 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/ann/yii/framework/web/CController.php(265): ProductController->runActionWithFilters()
+#14 /home/ann/yii/framework/web/CWebApplication.php(282): ProductController->run()
+#15 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/lab2/index.php(13): CWebApplication->run()
+REQUEST_URI=/lab2/index.php?r=product/view&id=1
+in /var/www/lab2/protected/views/product/view.php (35)
+in /var/www/lab2/protected/controllers/ProductController.php (56)
+in /var/www/lab2/index.php (13)
+2014/03/08 23:04:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "left_opinion".' in /home/ann/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/ann/yii/framework/web/CController.php(270): CController->missingAction('left_opinion')
+#1 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('left_opinion')
+#2 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/left_op...')
+#3 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/lab2/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lab2/index.php?r=product/left_opinion
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/view&id=1
+---
+2014/03/08 23:05:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "left_opinion".' in /home/ann/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/ann/yii/framework/web/CController.php(270): CController->missingAction('left_opinion')
+#1 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('left_opinion')
+#2 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/left_op...')
+#3 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/lab2/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lab2/index.php?r=product/left_opinion
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/view&id=1
+---
+2014/03/08 23:06:14 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/ann/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/ann/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/ann/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/admin')
+#9 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/lab2/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/lab2/index.php?r=product/admin
+HTTP_REFERER=http://localhost/lab2/index.php?r=product
+---
+2014/03/08 23:06:26 [error] [exception.CException] exception 'CException' with message 'ProductController cannot find the requested view "create".' in /home/ann/yii/framework/web/CController.php:878
+Stack trace:
+#0 /home/ann/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#1 /var/www/lab2/protected/controllers/ProductController.php(79): CController->render('create', Array)
+#2 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductController->actionCreate()
+#3 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/ann/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#12 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/create')
+#13 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/lab2/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/lab2/index.php?r=product/create
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/admin
+---
+2014/03/08 23:06:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "left_opinion".' in /home/ann/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/ann/yii/framework/web/CController.php(270): CController->missingAction('left_opinion')
+#1 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('left_opinion')
+#2 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/left_op...')
+#3 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/lab2/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lab2/index.php?r=product/left_opinion
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/view&id=1
+---
+2014/03/08 23:09:01 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /home/ann/yii/framework/web/CController.php:336
+Stack trace:
+#0 /home/ann/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/ann/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('opinion')
+#9 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/opinion')
+#10 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/lab2/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/lab2/index.php?r=product/opinion
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/view&id=1
+---
+2014/03/08 23:09:24 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /home/ann/yii/framework/web/CController.php:336
+Stack trace:
+#0 /home/ann/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/ann/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('opinion')
+#9 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/opinion')
+#10 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/lab2/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/lab2/index.php?r=product/opinion
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/view&id=1
+---
+2014/03/08 23:10:06 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /home/ann/yii/framework/web/CController.php:336
+Stack trace:
+#0 /home/ann/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/ann/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('opinion')
+#9 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/opinion')
+#10 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/lab2/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/lab2/index.php?r=product/opinion
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/view&id=1
+---
+2014/03/08 23:10:56 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /home/ann/yii/framework/web/CController.php:336
+Stack trace:
+#0 /home/ann/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/ann/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('opinion')
+#9 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/opinion')
+#10 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/lab2/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/lab2/index.php?r=product/opinion
+---
+2014/03/08 23:13:23 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /home/ann/yii/framework/web/CController.php:336
+Stack trace:
+#0 /home/ann/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/ann/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('opinion')
+#9 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/opinion')
+#10 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/lab2/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/lab2/index.php?r=product/opinion
+---
+2014/03/08 23:19:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "../opinion/_create_form".' in /home/ann/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('../opinion/_cre...')
+#1 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lab2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lab2/index.php?r=../opinion/_create_form
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/view&id=1
+---
+2014/03/08 23:20:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "_create_form".' in /home/ann/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/ann/yii/framework/web/CController.php(270): CController->missingAction('_create_form')
+#1 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('_create_form')
+#2 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('opinion/_create...')
+#3 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/lab2/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lab2/index.php?r=opinion/_create_form
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/view&id=1
+---
+2014/03/08 23:31:55 [error] [php] Undefined variable: product (/var/www/lab2/protected/views/opinion/create.php:18)
+Stack trace:
+#0 /home/ann/yii/framework/web/CController.php(869): OpinionController->renderFile()
+#1 /home/ann/yii/framework/web/CController.php(782): OpinionController->renderPartial()
+#2 /var/www/lab2/protected/controllers/OpinionController.php(80): OpinionController->render()
+#3 /home/ann/yii/framework/web/actions/CInlineAction.php(49): OpinionController->actionCreate()
+#4 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home/ann/yii/framework/web/filters/CFilterChain.php(133): OpinionController->runAction()
+#6 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/ann/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): OpinionController->filterAccessControl()
+#9 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/ann/yii/framework/web/CController.php(265): OpinionController->runActionWithFilters()
+#12 /home/ann/yii/framework/web/CWebApplication.php(282): OpinionController->run()
+#13 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/lab2/index.php(13): CWebApplication->run()
+REQUEST_URI=/lab2/index.php?r=opinion/create&product=1
+in /var/www/lab2/protected/views/opinion/create.php (18)
+in /var/www/lab2/protected/controllers/OpinionController.php (80)
+in /var/www/lab2/index.php (13)
+2014/03/08 23:37:42 [error] [php] Undefined variable: product (/var/www/lab2/protected/controllers/OpinionController.php:73)
+Stack trace:
+#0 /home/ann/yii/framework/web/filters/CFilterChain.php(133): OpinionController->runAction()
+#1 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /home/ann/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): OpinionController->filterAccessControl()
+#4 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/ann/yii/framework/web/CController.php(265): OpinionController->runActionWithFilters()
+#7 /home/ann/yii/framework/web/CWebApplication.php(282): OpinionController->run()
+#8 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/lab2/index.php(13): CWebApplication->run()
+REQUEST_URI=/lab2/index.php?r=opinion/create&product=2
+in /var/www/lab2/protected/controllers/OpinionController.php (73)
+in /var/www/lab2/index.php (13)
+2014/03/08 23:58:26 [error] [exception.CException] exception 'CException' with message 'Property "Product.categories" is not defined.' in /home/ann/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/ann/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('categories')
+#1 /var/www/lab2/protected/views/product/view.php(36): CActiveRecord->__get('categories')
+#2 /home/ann/yii/framework/web/CBaseController.php(126): require('/var/www/lab2/p...')
+#3 /home/ann/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/lab2/p...', Array, true)
+#4 /home/ann/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/lab2/p...', Array, true)
+#5 /home/ann/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /var/www/lab2/protected/controllers/ProductController.php(56): CController->render('view', Array)
+#7 [internal function]: ProductController->actionView('1')
+#8 /home/ann/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ProductController), Array)
+#9 /home/ann/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProductController), Object(ReflectionMethod), Array)
+#10 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/ann/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/view')
+#20 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /var/www/lab2/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/lab2/index.php?r=product/view&id=1
+HTTP_REFERER=http://localhost/lab2/index.php?r=product
+---
+2014/03/09 00:26:22 [error] [php] Object of class Product could not be converted to string (/var/www/lab2/protected/views/productCategory/_view.php:17)
+Stack trace:
+#0 /home/ann/yii/framework/zii/widgets/CListView.php(291): ProductCategoryController->renderFile()
+#1 /home/ann/yii/framework/zii/widgets/CBaseListView.php(167): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 /home/ann/yii/framework/zii/widgets/CBaseListView.php(150): preg_replace_callback()
+#4 /home/ann/yii/framework/zii/widgets/CBaseListView.php(135): CListView->renderContent()
+#5 /home/ann/yii/framework/web/CBaseController.php(173): CListView->run()
+#6 /var/www/lab2/protected/views/productCategory/index.php(20): ProductCategoryController->widget()
+#7 /home/ann/yii/framework/web/CBaseController.php(126): require()
+#8 /home/ann/yii/framework/web/CBaseController.php(95): ProductCategoryController->renderInternal()
+#9 /home/ann/yii/framework/web/CController.php(869): ProductCategoryController->renderFile()
+#10 /home/ann/yii/framework/web/CController.php(782): ProductCategoryController->renderPartial()
+#11 /var/www/lab2/protected/controllers/ProductCategoryController.php(128): ProductCategoryController->render()
+#12 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductCategoryController->actionIndex()
+#13 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /home/ann/yii/framework/web/filters/CFilterChain.php(133): ProductCategoryController->runAction()
+#15 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /home/ann/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): ProductCategoryController->filterAccessControl()
+#18 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#20 /home/ann/yii/framework/web/CController.php(265): ProductCategoryController->runActionWithFilters()
+#21 /home/ann/yii/framework/web/CWebApplication.php(282): ProductCategoryController->run()
+#22 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#24 /var/www/lab2/index.php(13): CWebApplication->run()
+REQUEST_URI=/lab2/index.php?r=productCategory
+in /var/www/lab2/protected/views/productCategory/_view.php (17)
+in /var/www/lab2/protected/views/productCategory/index.php (20)
+in /var/www/lab2/protected/controllers/ProductCategoryController.php (128)
+2014/03/09 00:36:18 [error] [php] Trying to get property of non-object (/var/www/lab2/protected/views/productCategory/admin.php:49)
+Stack trace:
+#0 /home/ann/yii/framework/web/CController.php(869): ProductCategoryController->renderFile()
+#1 /home/ann/yii/framework/web/CController.php(782): ProductCategoryController->renderPartial()
+#2 /var/www/lab2/protected/controllers/ProductCategoryController.php(143): ProductCategoryController->render()
+#3 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductCategoryController->actionAdmin()
+#4 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home/ann/yii/framework/web/filters/CFilterChain.php(133): ProductCategoryController->runAction()
+#6 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/ann/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): ProductCategoryController->filterAccessControl()
+#9 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/ann/yii/framework/web/CController.php(265): ProductCategoryController->runActionWithFilters()
+#12 /home/ann/yii/framework/web/CWebApplication.php(282): ProductCategoryController->run()
+#13 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/lab2/index.php(13): CWebApplication->run()
+REQUEST_URI=/lab2/index.php?r=productCategory/admin
+in /var/www/lab2/protected/views/productCategory/admin.php (49)
+in /var/www/lab2/protected/controllers/ProductCategoryController.php (143)
+in /var/www/lab2/index.php (13)
+2014/03/09 00:37:09 [error] [php] Trying to get property of non-object (/var/www/lab2/protected/views/productCategory/admin.php:49)
+Stack trace:
+#0 /home/ann/yii/framework/web/CController.php(869): ProductCategoryController->renderFile()
+#1 /home/ann/yii/framework/web/CController.php(782): ProductCategoryController->renderPartial()
+#2 /var/www/lab2/protected/controllers/ProductCategoryController.php(143): ProductCategoryController->render()
+#3 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductCategoryController->actionAdmin()
+#4 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home/ann/yii/framework/web/filters/CFilterChain.php(133): ProductCategoryController->runAction()
+#6 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/ann/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): ProductCategoryController->filterAccessControl()
+#9 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/ann/yii/framework/web/CController.php(265): ProductCategoryController->runActionWithFilters()
+#12 /home/ann/yii/framework/web/CWebApplication.php(282): ProductCategoryController->run()
+#13 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/lab2/index.php(13): CWebApplication->run()
+REQUEST_URI=/lab2/index.php?r=productCategory/admin
+in /var/www/lab2/protected/views/productCategory/admin.php (49)
+in /var/www/lab2/protected/controllers/ProductCategoryController.php (143)
+in /var/www/lab2/index.php (13)
+2014/03/09 00:38:30 [error] [php] Undefined variable: dataProvider (/var/www/lab2/protected/views/productCategory/admin.php:49)
+Stack trace:
+#0 /home/ann/yii/framework/web/CController.php(869): ProductCategoryController->renderFile()
+#1 /home/ann/yii/framework/web/CController.php(782): ProductCategoryController->renderPartial()
+#2 /var/www/lab2/protected/controllers/ProductCategoryController.php(143): ProductCategoryController->render()
+#3 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductCategoryController->actionAdmin()
+#4 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home/ann/yii/framework/web/filters/CFilterChain.php(133): ProductCategoryController->runAction()
+#6 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/ann/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): ProductCategoryController->filterAccessControl()
+#9 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/ann/yii/framework/web/CController.php(265): ProductCategoryController->runActionWithFilters()
+#12 /home/ann/yii/framework/web/CWebApplication.php(282): ProductCategoryController->run()
+#13 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/lab2/index.php(13): CWebApplication->run()
+REQUEST_URI=/lab2/index.php?r=productCategory/admin
+in /var/www/lab2/protected/views/productCategory/admin.php (49)
+in /var/www/lab2/protected/controllers/ProductCategoryController.php (143)
+in /var/www/lab2/index.php (13)
+2014/03/09 00:50:29 [error] [exception.CException] exception 'CException' with message 'Property "ProductCategory.Продукт" is not defined.' in /home/ann/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/ann/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('??????????????')
+#1 /home/ann/yii/framework/web/helpers/CHtml.php(2529): CActiveRecord->__get('??????????????')
+#2 /home/ann/yii/framework/web/helpers/CHtml.php(2252): CHtml::resolveValue(Object(ProductCategory), '??????????????')
+#3 /home/ann/yii/framework/web/helpers/CHtml.php(1434): CHtml::activeInputField('text', Object(ProductCategory), '??????????????', Array)
+#4 /home/ann/yii/framework/zii/widgets/grid/CDataColumn.php(103): CHtml::activeTextField(Object(ProductCategory), '??????????????', Array)
+#5 /home/ann/yii/framework/zii/widgets/grid/CGridColumn.php(116): CDataColumn->renderFilterCellContent()
+#6 /home/ann/yii/framework/zii/widgets/grid/CGridView.php(532): CGridColumn->renderFilterCell()
+#7 /home/ann/yii/framework/zii/widgets/grid/CGridView.php(510): CGridView->renderFilter()
+#8 /home/ann/yii/framework/zii/widgets/grid/CGridView.php(480): CGridView->renderTableHeader()
+#9 /home/ann/yii/framework/zii/widgets/CBaseListView.php(167): CGridView->renderItems()
+#10 [internal function]: CBaseListView->renderSection(Array)
+#11 /home/ann/yii/framework/zii/widgets/CBaseListView.php(150): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#12 /home/ann/yii/framework/zii/widgets/CBaseListView.php(135): CBaseListView->renderContent()
+#13 /home/ann/yii/framework/web/CBaseController.php(173): CBaseListView->run()
+#14 /var/www/lab2/protected/views/productCategory/admin.php(59): CBaseController->widget('zii.widgets.gri...', Array)
+#15 /home/ann/yii/framework/web/CBaseController.php(126): require('/var/www/lab2/p...')
+#16 /home/ann/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/lab2/p...', Array, true)
+#17 /home/ann/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/lab2/p...', Array, true)
+#18 /home/ann/yii/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#19 /var/www/lab2/protected/controllers/ProductCategoryController.php(143): CController->render('admin', Array)
+#20 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductCategoryController->actionAdmin()
+#21 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#22 /home/ann/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#23 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#24 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#25 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#26 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#27 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#28 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#30 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('productCategory...')
+#31 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#32 /var/www/lab2/index.php(13): CApplication->run()
+#33 {main}
+REQUEST_URI=/lab2/index.php?r=productCategory/admin
+HTTP_REFERER=http://localhost/lab2/index.php?r=productCategory/update&id=1
+---
+2014/03/09 00:50:45 [error] [php] htmlspecialchars() expects parameter 1 to be string, object given (/home/ann/yii/framework/web/helpers/CHtml.php:103)
+Stack trace:
+#0 /home/ann/yii/framework/utils/CFormatter.php(128): CFormatter->formatText()
+#1 /home/ann/yii/framework/zii/widgets/grid/CDataColumn.php(140): CFormatter->format()
+#2 /home/ann/yii/framework/zii/widgets/grid/CGridColumn.php(151): CDataColumn->renderDataCellContent()
+#3 /home/ann/yii/framework/zii/widgets/grid/CGridView.php(616): CDataColumn->renderDataCell()
+#4 /home/ann/yii/framework/zii/widgets/grid/CGridView.php(572): CGridView->renderTableRow()
+#5 /home/ann/yii/framework/zii/widgets/grid/CGridView.php(482): CGridView->renderTableBody()
+#6 /home/ann/yii/framework/zii/widgets/CBaseListView.php(167): CGridView->renderItems()
+#7 unknown(0): CGridView->renderSection()
+#8 /home/ann/yii/framework/zii/widgets/CBaseListView.php(150): preg_replace_callback()
+#9 /home/ann/yii/framework/zii/widgets/CBaseListView.php(135): CGridView->renderContent()
+#10 /home/ann/yii/framework/web/CBaseController.php(173): CGridView->run()
+#11 /var/www/lab2/protected/views/productCategory/admin.php(59): ProductCategoryController->widget()
+#12 /home/ann/yii/framework/web/CBaseController.php(126): require()
+#13 /home/ann/yii/framework/web/CBaseController.php(95): ProductCategoryController->renderInternal()
+#14 /home/ann/yii/framework/web/CController.php(869): ProductCategoryController->renderFile()
+#15 /home/ann/yii/framework/web/CController.php(782): ProductCategoryController->renderPartial()
+#16 /var/www/lab2/protected/controllers/ProductCategoryController.php(143): ProductCategoryController->render()
+#17 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductCategoryController->actionAdmin()
+#18 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#19 /home/ann/yii/framework/web/filters/CFilterChain.php(133): ProductCategoryController->runAction()
+#20 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#21 /home/ann/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#22 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): ProductCategoryController->filterAccessControl()
+#23 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#24 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#25 /home/ann/yii/framework/web/CController.php(265): ProductCategoryController->runActionWithFilters()
+#26 /home/ann/yii/framework/web/CWebApplication.php(282): ProductCategoryController->run()
+#27 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#28 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#29 /var/www/lab2/index.php(13): CWebApplication->run()
+REQUEST_URI=/lab2/index.php?r=productCategory/admin
+in /var/www/lab2/protected/views/productCategory/admin.php (59)
+in /var/www/lab2/protected/controllers/ProductCategoryController.php (143)
+in /var/www/lab2/index.php (13)
+2014/03/09 00:52:36 [error] [php] Undefined variable: theCellValue (/var/www/lab2/protected/models/ProductCategory.php:106)
+Stack trace:
+#0 /home/ann/yii/framework/zii/widgets/grid/CDataColumn.php(137): CDataColumn->evaluateExpression()
+#1 /home/ann/yii/framework/zii/widgets/grid/CGridColumn.php(151): CDataColumn->renderDataCellContent()
+#2 /home/ann/yii/framework/zii/widgets/grid/CGridView.php(616): CDataColumn->renderDataCell()
+#3 /home/ann/yii/framework/zii/widgets/grid/CGridView.php(572): CGridView->renderTableRow()
+#4 /home/ann/yii/framework/zii/widgets/grid/CGridView.php(482): CGridView->renderTableBody()
+#5 /home/ann/yii/framework/zii/widgets/CBaseListView.php(167): CGridView->renderItems()
+#6 unknown(0): CGridView->renderSection()
+#7 /home/ann/yii/framework/zii/widgets/CBaseListView.php(150): preg_replace_callback()
+#8 /home/ann/yii/framework/zii/widgets/CBaseListView.php(135): CGridView->renderContent()
+#9 /home/ann/yii/framework/web/CBaseController.php(173): CGridView->run()
+#10 /var/www/lab2/protected/views/productCategory/admin.php(59): ProductCategoryController->widget()
+#11 /home/ann/yii/framework/web/CBaseController.php(126): require()
+#12 /home/ann/yii/framework/web/CBaseController.php(95): ProductCategoryController->renderInternal()
+#13 /home/ann/yii/framework/web/CController.php(869): ProductCategoryController->renderFile()
+#14 /home/ann/yii/framework/web/CController.php(782): ProductCategoryController->renderPartial()
+#15 /var/www/lab2/protected/controllers/ProductCategoryController.php(143): ProductCategoryController->render()
+#16 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductCategoryController->actionAdmin()
+#17 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#18 /home/ann/yii/framework/web/filters/CFilterChain.php(133): ProductCategoryController->runAction()
+#19 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#20 /home/ann/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#21 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): ProductCategoryController->filterAccessControl()
+#22 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#23 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#24 /home/ann/yii/framework/web/CController.php(265): ProductCategoryController->runActionWithFilters()
+#25 /home/ann/yii/framework/web/CWebApplication.php(282): ProductCategoryController->run()
+#26 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#27 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#28 /var/www/lab2/index.php(13): CWebApplication->run()
+REQUEST_URI=/lab2/index.php?r=productCategory/admin
+in /var/www/lab2/protected/models/ProductCategory.php (106)
+in /var/www/lab2/protected/views/productCategory/admin.php (59)
+in /var/www/lab2/protected/controllers/ProductCategoryController.php (143)
+2014/03/09 00:54:11 [error] [php] Undefined variable: theCellValue (/var/www/lab2/protected/models/ProductCategory.php:106)
+Stack trace:
+#0 /home/ann/yii/framework/zii/widgets/grid/CDataColumn.php(137): CDataColumn->evaluateExpression()
+#1 /home/ann/yii/framework/zii/widgets/grid/CGridColumn.php(151): CDataColumn->renderDataCellContent()
+#2 /home/ann/yii/framework/zii/widgets/grid/CGridView.php(616): CDataColumn->renderDataCell()
+#3 /home/ann/yii/framework/zii/widgets/grid/CGridView.php(572): CGridView->renderTableRow()
+#4 /home/ann/yii/framework/zii/widgets/grid/CGridView.php(482): CGridView->renderTableBody()
+#5 /home/ann/yii/framework/zii/widgets/CBaseListView.php(167): CGridView->renderItems()
+#6 unknown(0): CGridView->renderSection()
+#7 /home/ann/yii/framework/zii/widgets/CBaseListView.php(150): preg_replace_callback()
+#8 /home/ann/yii/framework/zii/widgets/CBaseListView.php(135): CGridView->renderContent()
+#9 /home/ann/yii/framework/web/CBaseController.php(173): CGridView->run()
+#10 /var/www/lab2/protected/views/productCategory/admin.php(59): ProductCategoryController->widget()
+#11 /home/ann/yii/framework/web/CBaseController.php(126): require()
+#12 /home/ann/yii/framework/web/CBaseController.php(95): ProductCategoryController->renderInternal()
+#13 /home/ann/yii/framework/web/CController.php(869): ProductCategoryController->renderFile()
+#14 /home/ann/yii/framework/web/CController.php(782): ProductCategoryController->renderPartial()
+#15 /var/www/lab2/protected/controllers/ProductCategoryController.php(143): ProductCategoryController->render()
+#16 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductCategoryController->actionAdmin()
+#17 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#18 /home/ann/yii/framework/web/filters/CFilterChain.php(133): ProductCategoryController->runAction()
+#19 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#20 /home/ann/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#21 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): ProductCategoryController->filterAccessControl()
+#22 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#23 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#24 /home/ann/yii/framework/web/CController.php(265): ProductCategoryController->runActionWithFilters()
+#25 /home/ann/yii/framework/web/CWebApplication.php(282): ProductCategoryController->run()
+#26 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#27 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#28 /var/www/lab2/index.php(13): CWebApplication->run()
+REQUEST_URI=/lab2/index.php?r=productCategory/admin
+in /var/www/lab2/protected/models/ProductCategory.php (106)
+in /var/www/lab2/protected/views/productCategory/admin.php (59)
+in /var/www/lab2/protected/controllers/ProductCategoryController.php (143)
+2014/03/09 00:55:56 [error] [php] htmlspecialchars() expects parameter 1 to be string, object given (/home/ann/yii/framework/web/helpers/CHtml.php:103)
+Stack trace:
+#0 /home/ann/yii/framework/utils/CFormatter.php(128): CFormatter->formatText()
+#1 /home/ann/yii/framework/zii/widgets/grid/CDataColumn.php(140): CFormatter->format()
+#2 /home/ann/yii/framework/zii/widgets/grid/CGridColumn.php(151): CDataColumn->renderDataCellContent()
+#3 /home/ann/yii/framework/zii/widgets/grid/CGridView.php(616): CDataColumn->renderDataCell()
+#4 /home/ann/yii/framework/zii/widgets/grid/CGridView.php(572): CGridView->renderTableRow()
+#5 /home/ann/yii/framework/zii/widgets/grid/CGridView.php(482): CGridView->renderTableBody()
+#6 /home/ann/yii/framework/zii/widgets/CBaseListView.php(167): CGridView->renderItems()
+#7 unknown(0): CGridView->renderSection()
+#8 /home/ann/yii/framework/zii/widgets/CBaseListView.php(150): preg_replace_callback()
+#9 /home/ann/yii/framework/zii/widgets/CBaseListView.php(135): CGridView->renderContent()
+#10 /home/ann/yii/framework/web/CBaseController.php(173): CGridView->run()
+#11 /var/www/lab2/protected/views/productCategory/admin.php(59): ProductCategoryController->widget()
+#12 /home/ann/yii/framework/web/CBaseController.php(126): require()
+#13 /home/ann/yii/framework/web/CBaseController.php(95): ProductCategoryController->renderInternal()
+#14 /home/ann/yii/framework/web/CController.php(869): ProductCategoryController->renderFile()
+#15 /home/ann/yii/framework/web/CController.php(782): ProductCategoryController->renderPartial()
+#16 /var/www/lab2/protected/controllers/ProductCategoryController.php(143): ProductCategoryController->render()
+#17 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductCategoryController->actionAdmin()
+#18 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#19 /home/ann/yii/framework/web/filters/CFilterChain.php(133): ProductCategoryController->runAction()
+#20 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#21 /home/ann/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#22 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): ProductCategoryController->filterAccessControl()
+#23 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#24 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#25 /home/ann/yii/framework/web/CController.php(265): ProductCategoryController->runActionWithFilters()
+#26 /home/ann/yii/framework/web/CWebApplication.php(282): ProductCategoryController->run()
+#27 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#28 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#29 /var/www/lab2/index.php(13): CWebApplication->run()
+REQUEST_URI=/lab2/index.php?r=productCategory/admin
+in /var/www/lab2/protected/views/productCategory/admin.php (59)
+in /var/www/lab2/protected/controllers/ProductCategoryController.php (143)
+in /var/www/lab2/index.php (13)
+2014/03/09 01:11:58 [error] [php] Missing argument 3 for CHtml::listData(), called in /var/www/lab2/protected/views/productCategory/create.php on line 19 and defined (/home/ann/yii/framework/web/helpers/CHtml.php:2073)
+Stack trace:
+#0 /home/ann/yii/framework/web/CBaseController.php(95): ProductCategoryController->renderInternal()
+#1 /home/ann/yii/framework/web/CController.php(869): ProductCategoryController->renderFile()
+#2 /home/ann/yii/framework/web/CController.php(782): ProductCategoryController->renderPartial()
+#3 /var/www/lab2/protected/controllers/ProductCategoryController.php(79): ProductCategoryController->render()
+#4 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductCategoryController->actionCreate()
+#5 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /home/ann/yii/framework/web/filters/CFilterChain.php(133): ProductCategoryController->runAction()
+#7 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /home/ann/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#9 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): ProductCategoryController->filterAccessControl()
+#10 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#11 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /home/ann/yii/framework/web/CController.php(265): ProductCategoryController->runActionWithFilters()
+#13 /home/ann/yii/framework/web/CWebApplication.php(282): ProductCategoryController->run()
+#14 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /var/www/lab2/index.php(13): CWebApplication->run()
+REQUEST_URI=/lab2/index.php?r=productCategory/create
+in /var/www/lab2/protected/views/productCategory/create.php (19)
+in /var/www/lab2/protected/controllers/ProductCategoryController.php (79)
+in /var/www/lab2/index.php (13)
+2014/03/09 01:13:09 [error] [php] include(SysState.php): failed to open stream: No such file or directory (/home/ann/yii/framework/YiiBase.php:427)
+Stack trace:
+#0 /var/www/lab2/protected/views/productCategory/create.php(19): spl_autoload_call()
+#1 /home/ann/yii/framework/web/CBaseController.php(126): require()
+#2 /home/ann/yii/framework/web/CBaseController.php(95): ProductCategoryController->renderInternal()
+#3 /home/ann/yii/framework/web/CController.php(869): ProductCategoryController->renderFile()
+#4 /home/ann/yii/framework/web/CController.php(782): ProductCategoryController->renderPartial()
+#5 /var/www/lab2/protected/controllers/ProductCategoryController.php(79): ProductCategoryController->render()
+#6 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductCategoryController->actionCreate()
+#7 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /home/ann/yii/framework/web/filters/CFilterChain.php(133): ProductCategoryController->runAction()
+#9 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /home/ann/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#11 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): ProductCategoryController->filterAccessControl()
+#12 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#13 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#14 /home/ann/yii/framework/web/CController.php(265): ProductCategoryController->runActionWithFilters()
+#15 /home/ann/yii/framework/web/CWebApplication.php(282): ProductCategoryController->run()
+#16 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/lab2/index.php(13): CWebApplication->run()
+REQUEST_URI=/lab2/index.php?r=productCategory/create
+in /var/www/lab2/protected/views/productCategory/create.php (19)
+in /var/www/lab2/protected/controllers/ProductCategoryController.php (79)
+in /var/www/lab2/index.php (13)
+2014/03/09 01:52:07 [error] [exception.CException] exception 'CException' with message 'Property "CActiveForm.pr" is not defined.' in /home/ann/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/lab2/protected/views/productCategory/_form.php(36): CComponent->__get('pr')
+#1 /home/ann/yii/framework/web/CBaseController.php(126): require('/var/www/lab2/p...')
+#2 /home/ann/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/lab2/p...', Array, true)
+#3 /home/ann/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/lab2/p...', Array, true)
+#4 /var/www/lab2/protected/views/productCategory/create.php(18): CController->renderPartial('_form', Array)
+#5 /home/ann/yii/framework/web/CBaseController.php(126): require('/var/www/lab2/p...')
+#6 /home/ann/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/lab2/p...', Array, true)
+#7 /home/ann/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/lab2/p...', Array, true)
+#8 /home/ann/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#9 /var/www/lab2/protected/controllers/ProductCategoryController.php(79): CController->render('create', Array)
+#10 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductCategoryController->actionCreate()
+#11 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /home/ann/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#18 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#20 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('productCategory...')
+#21 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /var/www/lab2/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/lab2/index.php?r=productCategory/create
+---
+2014/03/09 01:52:51 [error] [exception.CException] exception 'CException' with message 'Property "CActiveForm.pr" is not defined.' in /home/ann/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/lab2/protected/views/productCategory/_form.php(35): CComponent->__get('pr')
+#1 /home/ann/yii/framework/web/CBaseController.php(126): require('/var/www/lab2/p...')
+#2 /home/ann/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/lab2/p...', Array, true)
+#3 /home/ann/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/lab2/p...', Array, true)
+#4 /var/www/lab2/protected/views/productCategory/create.php(18): CController->renderPartial('_form', Array)
+#5 /home/ann/yii/framework/web/CBaseController.php(126): require('/var/www/lab2/p...')
+#6 /home/ann/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/lab2/p...', Array, true)
+#7 /home/ann/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/lab2/p...', Array, true)
+#8 /home/ann/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#9 /var/www/lab2/protected/controllers/ProductCategoryController.php(79): CController->render('create', Array)
+#10 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductCategoryController->actionCreate()
+#11 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /home/ann/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#18 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#20 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('productCategory...')
+#21 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /var/www/lab2/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/lab2/index.php?r=productCategory/create
+---
+2014/03/09 01:53:12 [error] [exception.CException] exception 'CException' with message 'Property "CActiveForm.<select name="Продукт" id="Продукт">
+<option value="">Выберите продукт</option>
+<option value="1">harry potter</option>
+<option value="2">rose</option>
+<option value="3">Green mile</option>
+</select>" is not defined.' in /home/ann/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/lab2/protected/views/productCategory/_form.php(36): CComponent->__get('<select name="?...')
+#1 /home/ann/yii/framework/web/CBaseController.php(126): require('/var/www/lab2/p...')
+#2 /home/ann/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/lab2/p...', Array, true)
+#3 /home/ann/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/lab2/p...', Array, true)
+#4 /var/www/lab2/protected/views/productCategory/create.php(18): CController->renderPartial('_form', Array)
+#5 /home/ann/yii/framework/web/CBaseController.php(126): require('/var/www/lab2/p...')
+#6 /home/ann/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/lab2/p...', Array, true)
+#7 /home/ann/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/lab2/p...', Array, true)
+#8 /home/ann/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#9 /var/www/lab2/protected/controllers/ProductCategoryController.php(79): CController->render('create', Array)
+#10 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductCategoryController->actionCreate()
+#11 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /home/ann/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#18 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#20 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('productCategory...')
+#21 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /var/www/lab2/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/lab2/index.php?r=productCategory/create
+---
+2014/03/09 01:59:25 [error] [php] strpos() expects parameter 1 to be string, object given (/home/ann/yii/framework/web/helpers/CHtml.php:2477)
+Stack trace:
+#0 /home/ann/yii/framework/web/helpers/CHtml.php(1801): resolveNameID()
+#1 /home/ann/yii/framework/web/widgets/CActiveForm.php(847): activeDropDownList()
+#2 /var/www/lab2/protected/views/productCategory/_form.php(36): CActiveForm->dropDownList()
+#3 /home/ann/yii/framework/web/CBaseController.php(126): require()
+#4 /home/ann/yii/framework/web/CBaseController.php(95): ProductCategoryController->renderInternal()
+#5 /home/ann/yii/framework/web/CController.php(869): ProductCategoryController->renderFile()
+#6 /var/www/lab2/protected/views/productCategory/create.php(18): ProductCategoryController->renderPartial()
+#7 /home/ann/yii/framework/web/CBaseController.php(126): require()
+#8 /home/ann/yii/framework/web/CBaseController.php(95): ProductCategoryController->renderInternal()
+#9 /home/ann/yii/framework/web/CController.php(869): ProductCategoryController->renderFile()
+#10 /home/ann/yii/framework/web/CController.php(782): ProductCategoryController->renderPartial()
+#11 /var/www/lab2/protected/controllers/ProductCategoryController.php(79): ProductCategoryController->render()
+#12 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductCategoryController->actionCreate()
+#13 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /home/ann/yii/framework/web/filters/CFilterChain.php(133): ProductCategoryController->runAction()
+#15 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /home/ann/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): ProductCategoryController->filterAccessControl()
+#18 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#20 /home/ann/yii/framework/web/CController.php(265): ProductCategoryController->runActionWithFilters()
+#21 /home/ann/yii/framework/web/CWebApplication.php(282): ProductCategoryController->run()
+#22 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#24 /var/www/lab2/index.php(13): CWebApplication->run()
+REQUEST_URI=/lab2/index.php?r=productCategory/create
+in /var/www/lab2/protected/views/productCategory/_form.php (36)
+in /var/www/lab2/protected/views/productCategory/create.php (18)
+in /var/www/lab2/protected/controllers/ProductCategoryController.php (79)
+2014/03/09 02:00:16 [error] [php] strpos() expects parameter 1 to be string, object given (/home/ann/yii/framework/web/helpers/CHtml.php:2477)
+Stack trace:
+#0 /home/ann/yii/framework/web/helpers/CHtml.php(1801): resolveNameID()
+#1 /home/ann/yii/framework/web/widgets/CActiveForm.php(847): activeDropDownList()
+#2 /var/www/lab2/protected/views/productCategory/_form.php(37): CActiveForm->dropDownList()
+#3 /home/ann/yii/framework/web/CBaseController.php(126): require()
+#4 /home/ann/yii/framework/web/CBaseController.php(95): ProductCategoryController->renderInternal()
+#5 /home/ann/yii/framework/web/CController.php(869): ProductCategoryController->renderFile()
+#6 /var/www/lab2/protected/views/productCategory/create.php(18): ProductCategoryController->renderPartial()
+#7 /home/ann/yii/framework/web/CBaseController.php(126): require()
+#8 /home/ann/yii/framework/web/CBaseController.php(95): ProductCategoryController->renderInternal()
+#9 /home/ann/yii/framework/web/CController.php(869): ProductCategoryController->renderFile()
+#10 /home/ann/yii/framework/web/CController.php(782): ProductCategoryController->renderPartial()
+#11 /var/www/lab2/protected/controllers/ProductCategoryController.php(79): ProductCategoryController->render()
+#12 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductCategoryController->actionCreate()
+#13 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /home/ann/yii/framework/web/filters/CFilterChain.php(133): ProductCategoryController->runAction()
+#15 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /home/ann/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): ProductCategoryController->filterAccessControl()
+#18 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#20 /home/ann/yii/framework/web/CController.php(265): ProductCategoryController->runActionWithFilters()
+#21 /home/ann/yii/framework/web/CWebApplication.php(282): ProductCategoryController->run()
+#22 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#24 /var/www/lab2/index.php(13): CWebApplication->run()
+REQUEST_URI=/lab2/index.php?r=productCategory/create
+in /var/www/lab2/protected/views/productCategory/_form.php (37)
+in /var/www/lab2/protected/views/productCategory/create.php (18)
+in /var/www/lab2/protected/controllers/ProductCategoryController.php (79)
+2014/03/09 02:01:26 [error] [php] strpos() expects parameter 1 to be string, object given (/home/ann/yii/framework/web/helpers/CHtml.php:2477)
+Stack trace:
+#0 /home/ann/yii/framework/web/helpers/CHtml.php(1801): resolveNameID()
+#1 /home/ann/yii/framework/web/widgets/CActiveForm.php(847): activeDropDownList()
+#2 /var/www/lab2/protected/views/productCategory/_form.php(37): CActiveForm->dropDownList()
+#3 /home/ann/yii/framework/web/CBaseController.php(126): require()
+#4 /home/ann/yii/framework/web/CBaseController.php(95): ProductCategoryController->renderInternal()
+#5 /home/ann/yii/framework/web/CController.php(869): ProductCategoryController->renderFile()
+#6 /var/www/lab2/protected/views/productCategory/create.php(18): ProductCategoryController->renderPartial()
+#7 /home/ann/yii/framework/web/CBaseController.php(126): require()
+#8 /home/ann/yii/framework/web/CBaseController.php(95): ProductCategoryController->renderInternal()
+#9 /home/ann/yii/framework/web/CController.php(869): ProductCategoryController->renderFile()
+#10 /home/ann/yii/framework/web/CController.php(782): ProductCategoryController->renderPartial()
+#11 /var/www/lab2/protected/controllers/ProductCategoryController.php(79): ProductCategoryController->render()
+#12 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductCategoryController->actionCreate()
+#13 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /home/ann/yii/framework/web/filters/CFilterChain.php(133): ProductCategoryController->runAction()
+#15 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /home/ann/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): ProductCategoryController->filterAccessControl()
+#18 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#20 /home/ann/yii/framework/web/CController.php(265): ProductCategoryController->runActionWithFilters()
+#21 /home/ann/yii/framework/web/CWebApplication.php(282): ProductCategoryController->run()
+#22 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#24 /var/www/lab2/index.php(13): CWebApplication->run()
+REQUEST_URI=/lab2/index.php?r=productCategory/create
+in /var/www/lab2/protected/views/productCategory/_form.php (37)
+in /var/www/lab2/protected/views/productCategory/create.php (18)
+in /var/www/lab2/protected/controllers/ProductCategoryController.php (79)
+2014/03/09 02:01:33 [error] [php] strpos() expects parameter 1 to be string, object given (/home/ann/yii/framework/web/helpers/CHtml.php:2477)
+Stack trace:
+#0 /home/ann/yii/framework/web/helpers/CHtml.php(1801): resolveNameID()
+#1 /home/ann/yii/framework/web/widgets/CActiveForm.php(847): activeDropDownList()
+#2 /var/www/lab2/protected/views/productCategory/_form.php(37): CActiveForm->dropDownList()
+#3 /home/ann/yii/framework/web/CBaseController.php(126): require()
+#4 /home/ann/yii/framework/web/CBaseController.php(95): ProductCategoryController->renderInternal()
+#5 /home/ann/yii/framework/web/CController.php(869): ProductCategoryController->renderFile()
+#6 /var/www/lab2/protected/views/productCategory/create.php(18): ProductCategoryController->renderPartial()
+#7 /home/ann/yii/framework/web/CBaseController.php(126): require()
+#8 /home/ann/yii/framework/web/CBaseController.php(95): ProductCategoryController->renderInternal()
+#9 /home/ann/yii/framework/web/CController.php(869): ProductCategoryController->renderFile()
+#10 /home/ann/yii/framework/web/CController.php(782): ProductCategoryController->renderPartial()
+#11 /var/www/lab2/protected/controllers/ProductCategoryController.php(79): ProductCategoryController->render()
+#12 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductCategoryController->actionCreate()
+#13 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /home/ann/yii/framework/web/filters/CFilterChain.php(133): ProductCategoryController->runAction()
+#15 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /home/ann/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): ProductCategoryController->filterAccessControl()
+#18 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#20 /home/ann/yii/framework/web/CController.php(265): ProductCategoryController->runActionWithFilters()
+#21 /home/ann/yii/framework/web/CWebApplication.php(282): ProductCategoryController->run()
+#22 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#24 /var/www/lab2/index.php(13): CWebApplication->run()
+REQUEST_URI=/lab2/index.php?r=productCategory/create
+in /var/www/lab2/protected/views/productCategory/_form.php (37)
+in /var/www/lab2/protected/views/productCategory/create.php (18)
+in /var/www/lab2/protected/controllers/ProductCategoryController.php (79)
+2014/03/09 02:21:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "udpatePid".' in /home/ann/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/ann/yii/framework/web/CController.php(270): CController->missingAction('udpatePid')
+#1 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('udpatePid')
+#2 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('productCategory...')
+#3 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/lab2/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lab2/index.php?r=productCategory/udpatePid
+HTTP_REFERER=http://localhost/lab2/index.php?r=productCategory/create
+---
+2014/03/09 02:21:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "udpatePid".' in /home/ann/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/ann/yii/framework/web/CController.php(270): CController->missingAction('udpatePid')
+#1 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('udpatePid')
+#2 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('productCategory...')
+#3 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/lab2/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lab2/index.php?r=productCategory/udpatePid
+HTTP_REFERER=http://localhost/lab2/index.php?r=productCategory/create
+---
+2014/03/09 02:22:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "udpatePid".' in /home/ann/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/ann/yii/framework/web/CController.php(270): CController->missingAction('udpatePid')
+#1 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('udpatePid')
+#2 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('productCategory...')
+#3 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/lab2/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lab2/index.php?r=productCategory/udpatePid
+HTTP_REFERER=http://localhost/lab2/index.php?r=productCategory/create
+---
+2014/03/09 02:24:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "admin".' in /home/ann/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/ann/yii/framework/web/CController.php(270): CController->missingAction('admin')
+#1 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#2 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('productCategory...')
+#3 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/lab2/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lab2/index.php?r=productCategory/admin
+---
+2014/03/09 02:24:23 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/ann/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/ann/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/ann/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('updatePid')
+#8 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('productCategory...')
+#9 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/lab2/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/lab2/index.php?r=productCategory/updatePid
+---
+2014/03/09 02:24:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "udpatePid".' in /home/ann/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/ann/yii/framework/web/CController.php(270): CController->missingAction('udpatePid')
+#1 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('udpatePid')
+#2 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('productCategory...')
+#3 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/lab2/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lab2/index.php?r=productCategory/udpatePid
+HTTP_REFERER=http://localhost/lab2/index.php?r=productCategory/create
+---
+2014/03/09 02:25:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "udpatePid".' in /home/ann/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/ann/yii/framework/web/CController.php(270): CController->missingAction('udpatePid')
+#1 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('udpatePid')
+#2 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('productCategory...')
+#3 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/lab2/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lab2/index.php?r=productCategory/udpatePid
+---
+2014/03/09 02:25:48 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/ann/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/ann/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/ann/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('updatePid')
+#8 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('productCategory...')
+#9 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/lab2/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/lab2/index.php?r=productCategory/updatePid
+---
+2014/03/09 02:26:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/ann/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/ann/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/ann/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('updatePid')
+#8 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('productCategory...')
+#9 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/lab2/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/lab2/index.php?r=productCategory/updatePid
+HTTP_REFERER=http://localhost/lab2/index.php?r=productCategory/create
+---
+2014/03/09 02:29:30 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/ann/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/ann/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/ann/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('updateCid')
+#8 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('productCategory...')
+#9 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/lab2/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/lab2/index.php?r=productCategory/updateCid
+HTTP_REFERER=http://localhost/lab2/index.php?r=productCategory/create
+---
+2014/03/09 02:29:31 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/ann/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/ann/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/ann/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('updateCid')
+#8 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('productCategory...')
+#9 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/lab2/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/lab2/index.php?r=productCategory/updateCid
+HTTP_REFERER=http://localhost/lab2/index.php?r=productCategory/create
+---
+2014/03/09 02:29:36 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/ann/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/ann/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/ann/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('updateCid')
+#8 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('productCategory...')
+#9 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/lab2/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/lab2/index.php?r=productCategory/updateCid
+HTTP_REFERER=http://localhost/lab2/index.php?r=productCategory/create
+---
+2014/03/09 02:29:37 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/ann/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/ann/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/ann/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('updateCid')
+#8 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('productCategory...')
+#9 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/lab2/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/lab2/index.php?r=productCategory/updateCid
+HTTP_REFERER=http://localhost/lab2/index.php?r=productCategory/create
+---
+2014/03/09 02:34:17 [error] [php] Object of class ProductCategory could not be converted to string (/home/ann/yii/framework/web/helpers/CHtml.php:2155)
+Stack trace:
+#0 /home/ann/yii/framework/web/helpers/CHtml.php(596): inputField()
+#1 /var/www/lab2/protected/views/productCategory/_form.php(52): textField()
+#2 /home/ann/yii/framework/web/CBaseController.php(126): require()
+#3 /home/ann/yii/framework/web/CBaseController.php(95): ProductCategoryController->renderInternal()
+#4 /home/ann/yii/framework/web/CController.php(869): ProductCategoryController->renderFile()
+#5 /var/www/lab2/protected/views/productCategory/create.php(18): ProductCategoryController->renderPartial()
+#6 /home/ann/yii/framework/web/CBaseController.php(126): require()
+#7 /home/ann/yii/framework/web/CBaseController.php(95): ProductCategoryController->renderInternal()
+#8 /home/ann/yii/framework/web/CController.php(869): ProductCategoryController->renderFile()
+#9 /home/ann/yii/framework/web/CController.php(782): ProductCategoryController->renderPartial()
+#10 /var/www/lab2/protected/controllers/ProductCategoryController.php(79): ProductCategoryController->render()
+#11 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductCategoryController->actionCreate()
+#12 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /home/ann/yii/framework/web/filters/CFilterChain.php(133): ProductCategoryController->runAction()
+#14 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /home/ann/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#16 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): ProductCategoryController->filterAccessControl()
+#17 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#18 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /home/ann/yii/framework/web/CController.php(265): ProductCategoryController->runActionWithFilters()
+#20 /home/ann/yii/framework/web/CWebApplication.php(282): ProductCategoryController->run()
+#21 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#22 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#23 /var/www/lab2/index.php(13): CWebApplication->run()
+REQUEST_URI=/lab2/index.php?r=productCategory/create
+in /var/www/lab2/protected/views/productCategory/_form.php (52)
+in /var/www/lab2/protected/views/productCategory/create.php (18)
+in /var/www/lab2/protected/controllers/ProductCategoryController.php (79)
+2014/03/09 03:24:23 [error] [php] Undefined variable: model (/var/www/lab2/protected/views/product/_view.php:46)
+Stack trace:
+#0 /home/ann/yii/framework/zii/widgets/CListView.php(291): ProductController->renderFile()
+#1 /home/ann/yii/framework/zii/widgets/CBaseListView.php(167): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 /home/ann/yii/framework/zii/widgets/CBaseListView.php(150): preg_replace_callback()
+#4 /home/ann/yii/framework/zii/widgets/CBaseListView.php(135): CListView->renderContent()
+#5 /home/ann/yii/framework/web/CBaseController.php(173): CListView->run()
+#6 /var/www/lab2/protected/views/product/index.php(20): ProductController->widget()
+#7 /home/ann/yii/framework/web/CBaseController.php(126): require()
+#8 /home/ann/yii/framework/web/CBaseController.php(95): ProductController->renderInternal()
+#9 /home/ann/yii/framework/web/CController.php(869): ProductController->renderFile()
+#10 /home/ann/yii/framework/web/CController.php(782): ProductController->renderPartial()
+#11 /var/www/lab2/protected/controllers/ProductController.php(135): ProductController->render()
+#12 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductController->actionIndex()
+#13 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /home/ann/yii/framework/web/filters/CFilterChain.php(133): ProductController->runAction()
+#15 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /home/ann/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): ProductController->filterAccessControl()
+#18 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#20 /home/ann/yii/framework/web/CController.php(265): ProductController->runActionWithFilters()
+#21 /home/ann/yii/framework/web/CWebApplication.php(282): ProductController->run()
+#22 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#24 /var/www/lab2/index.php(13): CWebApplication->run()
+REQUEST_URI=/lab2/index.php?r=product/index
+in /var/www/lab2/protected/views/product/_view.php (46)
+in /var/www/lab2/protected/views/product/index.php (20)
+in /var/www/lab2/protected/controllers/ProductController.php (135)
+2014/03/09 03:49:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "controller/productController/updateMark".' in /home/ann/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('controller/prod...')
+#1 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lab2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lab2/index.php?r=controller/productController/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/index
+---
+2014/03/09 03:49:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "controller/productController/updateMark".' in /home/ann/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('controller/prod...')
+#1 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lab2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lab2/index.php?r=controller/productController/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/index
+---
+2014/03/09 03:49:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "controller/productController/updateMark".' in /home/ann/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('controller/prod...')
+#1 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lab2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lab2/index.php?r=controller/productController/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/index
+---
+2014/03/09 03:49:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "controller/productController/updateMark".' in /home/ann/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('controller/prod...')
+#1 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lab2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lab2/index.php?r=controller/productController/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/index
+---
+2014/03/09 03:49:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "controller/productController/updateMark".' in /home/ann/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('controller/prod...')
+#1 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lab2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lab2/index.php?r=controller/productController/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/index
+---
+2014/03/09 03:49:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "controller/productController/updateMark".' in /home/ann/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('controller/prod...')
+#1 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lab2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lab2/index.php?r=controller/productController/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/index
+---
+2014/03/09 03:49:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "controller/productController/updateMark".' in /home/ann/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('controller/prod...')
+#1 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lab2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lab2/index.php?r=controller/productController/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/index
+---
+2014/03/09 03:49:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "controller/productController/updateMark".' in /home/ann/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('controller/prod...')
+#1 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lab2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lab2/index.php?r=controller/productController/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/index
+---
+2014/03/09 03:49:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "controller/productController/updateMark".' in /home/ann/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('controller/prod...')
+#1 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lab2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lab2/index.php?r=controller/productController/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/index
+---
+2014/03/09 03:49:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "controller/productController/updateMark".' in /home/ann/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('controller/prod...')
+#1 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lab2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lab2/index.php?r=controller/productController/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/index
+---
+2014/03/09 03:49:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "controller/productController/updateMark".' in /home/ann/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('controller/prod...')
+#1 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lab2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lab2/index.php?r=controller/productController/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/index
+---
+2014/03/09 03:50:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "controller/productController/updateMark".' in /home/ann/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('controller/prod...')
+#1 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lab2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lab2/index.php?r=controller/productController/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/index
+---
+2014/03/09 03:50:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "controller/productController/updateMark".' in /home/ann/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('controller/prod...')
+#1 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lab2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lab2/index.php?r=controller/productController/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/index
+---
+2014/03/09 03:50:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "controller/productController/updateMark".' in /home/ann/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('controller/prod...')
+#1 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lab2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lab2/index.php?r=controller/productController/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/index
+---
+2014/03/09 03:50:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "controller/productController/updateMark".' in /home/ann/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('controller/prod...')
+#1 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lab2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lab2/index.php?r=controller/productController/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/index
+---
+2014/03/09 03:51:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "controller/productController/updateMark".' in /home/ann/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('controller/prod...')
+#1 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lab2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lab2/index.php?r=controller/productController/updateMark
+---
+2014/03/09 03:51:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "productController/updateMark".' in /home/ann/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('productControll...')
+#1 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lab2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lab2/index.php?r=productController/updateMark
+---
+2014/03/09 03:51:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "updateMark".' in /home/ann/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/ann/yii/framework/web/CController.php(270): CController->missingAction('updateMark')
+#1 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('updateMark')
+#2 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/updateM...')
+#3 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/lab2/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lab2/index.php?r=product/updateMark
+---
+2014/03/09 03:52:41 [error] [exception.CHttpException.201] exception 'CHttpException' with message 'it's alive.' in /var/www/lab2/protected/controllers/ProductController.php:183
+Stack trace:
+#0 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductController->actionUpdateMark()
+#1 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /home/ann/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('updateMark')
+#10 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/updateM...')
+#11 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/lab2/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/lab2/index.php?r=product/updateMark
+---
+2014/03/09 03:52:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "controller/productController/updateMark".' in /home/ann/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('controller/prod...')
+#1 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lab2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lab2/index.php?r=controller/productController/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product
+---
+2014/03/09 03:53:04 [error] [exception.CHttpException.201] exception 'CHttpException' with message 'it's alive.' in /var/www/lab2/protected/controllers/ProductController.php:183
+Stack trace:
+#0 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductController->actionUpdateMark()
+#1 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /home/ann/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('updateMark')
+#10 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/updateM...')
+#11 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/lab2/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/lab2/index.php?r=product/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product
+---
+2014/03/09 03:53:12 [error] [exception.CHttpException.201] exception 'CHttpException' with message 'it's alive.' in /var/www/lab2/protected/controllers/ProductController.php:183
+Stack trace:
+#0 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductController->actionUpdateMark()
+#1 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /home/ann/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('updateMark')
+#10 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/updateM...')
+#11 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/lab2/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/lab2/index.php?r=product/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product
+---
+2014/03/09 03:55:42 [error] [exception.CHttpException.201] exception 'CHttpException' with message 'it's alive.' in /var/www/lab2/protected/controllers/ProductController.php:183
+Stack trace:
+#0 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductController->actionUpdateMark()
+#1 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /home/ann/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('updateMark')
+#10 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/updateM...')
+#11 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/lab2/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/lab2/index.php?r=product/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/index
+---
+2014/03/09 04:00:30 [error] [exception.CHttpException.201] exception 'CHttpException' with message 'it's alive.' in /var/www/lab2/protected/controllers/ProductController.php:183
+Stack trace:
+#0 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductController->actionUpdateMark()
+#1 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /home/ann/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('updateMark')
+#10 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/updateM...')
+#11 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/lab2/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/lab2/index.php?r=product/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/index
+---
+2014/03/09 04:03:53 [error] [exception.CHttpException.201] exception 'CHttpException' with message 'it's alive.' in /var/www/lab2/protected/controllers/ProductController.php:183
+Stack trace:
+#0 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductController->actionUpdateMark()
+#1 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /home/ann/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('updateMark')
+#10 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/updateM...')
+#11 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/lab2/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/lab2/index.php?r=product/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/index
+---
+2014/03/09 04:06:14 [error] [exception.CHttpException.201] exception 'CHttpException' in /var/www/lab2/protected/controllers/ProductController.php:184
+Stack trace:
+#0 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductController->actionUpdateMark()
+#1 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /home/ann/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('updateMark')
+#10 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/updateM...')
+#11 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/lab2/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/lab2/index.php?r=product/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/index
+---
+2014/03/09 04:06:47 [error] [exception.CHttpException.201] exception 'CHttpException' with message 'it's alive.' in /var/www/lab2/protected/controllers/ProductController.php:185
+Stack trace:
+#0 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductController->actionUpdateMark()
+#1 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /home/ann/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('updateMark')
+#10 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/updateM...')
+#11 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/lab2/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/lab2/index.php?r=product/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/index
+---
+2014/03/09 04:06:52 [error] [exception.CHttpException.201] exception 'CHttpException' with message 'it's alive.' in /var/www/lab2/protected/controllers/ProductController.php:185
+Stack trace:
+#0 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductController->actionUpdateMark()
+#1 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /home/ann/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('updateMark')
+#10 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/updateM...')
+#11 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/lab2/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/lab2/index.php?r=product/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/index
+---
+2014/03/09 04:08:29 [error] [exception.CHttpException.201] exception 'CHttpException' with message 'it's alive.2' in /var/www/lab2/protected/controllers/ProductController.php:184
+Stack trace:
+#0 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductController->actionUpdateMark()
+#1 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /home/ann/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('updateMark')
+#10 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/updateM...')
+#11 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/lab2/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/lab2/index.php?r=product/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/index
+---
+2014/03/09 04:13:20 [error] [php] Undefined index: Product (/var/www/lab2/protected/controllers/ProductController.php:185)
+Stack trace:
+#0 /home/ann/yii/framework/web/filters/CFilterChain.php(133): ProductController->runAction()
+#1 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /home/ann/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): ProductController->filterAccessControl()
+#4 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/ann/yii/framework/web/CController.php(265): ProductController->runActionWithFilters()
+#7 /home/ann/yii/framework/web/CWebApplication.php(282): ProductController->run()
+#8 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/lab2/index.php(13): CWebApplication->run()
+REQUEST_URI=/lab2/index.php?r=product/updateMark
+in /var/www/lab2/protected/controllers/ProductController.php (185)
+in /var/www/lab2/index.php (13)
+2014/03/09 04:13:50 [error] [php] Undefined index: Product (/var/www/lab2/protected/controllers/ProductController.php:185)
+Stack trace:
+#0 /home/ann/yii/framework/web/filters/CFilterChain.php(133): ProductController->runAction()
+#1 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /home/ann/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): ProductController->filterAccessControl()
+#4 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/ann/yii/framework/web/CController.php(265): ProductController->runActionWithFilters()
+#7 /home/ann/yii/framework/web/CWebApplication.php(282): ProductController->run()
+#8 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/lab2/index.php(13): CWebApplication->run()
+REQUEST_URI=/lab2/index.php?r=product/updateMark
+in /var/www/lab2/protected/controllers/ProductController.php (185)
+in /var/www/lab2/index.php (13)
+2014/03/09 04:14:31 [error] [php] Undefined index: Product (/var/www/lab2/protected/controllers/ProductController.php:185)
+Stack trace:
+#0 /home/ann/yii/framework/web/filters/CFilterChain.php(133): ProductController->runAction()
+#1 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /home/ann/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): ProductController->filterAccessControl()
+#4 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/ann/yii/framework/web/CController.php(265): ProductController->runActionWithFilters()
+#7 /home/ann/yii/framework/web/CWebApplication.php(282): ProductController->run()
+#8 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/lab2/index.php(13): CWebApplication->run()
+REQUEST_URI=/lab2/index.php?r=product/updateMark
+in /var/www/lab2/protected/controllers/ProductController.php (185)
+in /var/www/lab2/index.php (13)
+2014/03/09 04:14:36 [error] [php] Undefined index: Product (/var/www/lab2/protected/controllers/ProductController.php:185)
+Stack trace:
+#0 /home/ann/yii/framework/web/filters/CFilterChain.php(133): ProductController->runAction()
+#1 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /home/ann/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): ProductController->filterAccessControl()
+#4 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/ann/yii/framework/web/CController.php(265): ProductController->runActionWithFilters()
+#7 /home/ann/yii/framework/web/CWebApplication.php(282): ProductController->run()
+#8 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/lab2/index.php(13): CWebApplication->run()
+REQUEST_URI=/lab2/index.php?r=product/updateMark
+in /var/www/lab2/protected/controllers/ProductController.php (185)
+in /var/www/lab2/index.php (13)
+2014/03/09 04:22:51 [error] [php] Undefined variable: data (/var/www/lab2/protected/views/product/view.php:55)
+Stack trace:
+#0 /home/ann/yii/framework/web/CController.php(869): ProductController->renderFile()
+#1 /home/ann/yii/framework/web/CController.php(782): ProductController->renderPartial()
+#2 /var/www/lab2/protected/controllers/ProductController.php(56): ProductController->render()
+#3 unknown(0): ProductController->actionView()
+#4 /home/ann/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /home/ann/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /home/ann/yii/framework/web/filters/CFilterChain.php(133): ProductController->runAction()
+#8 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/ann/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): ProductController->filterAccessControl()
+#11 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/ann/yii/framework/web/CController.php(265): ProductController->runActionWithFilters()
+#14 /home/ann/yii/framework/web/CWebApplication.php(282): ProductController->run()
+#15 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/lab2/index.php(13): CWebApplication->run()
+REQUEST_URI=/lab2/index.php?r=product/view&id=3
+in /var/www/lab2/protected/views/product/view.php (55)
+in /var/www/lab2/protected/controllers/ProductController.php (56)
+in /var/www/lab2/index.php (13)
+2014/03/09 04:23:08 [error] [php] Undefined variable: data (/var/www/lab2/protected/views/product/view.php:58)
+Stack trace:
+#0 /home/ann/yii/framework/web/CController.php(869): ProductController->renderFile()
+#1 /home/ann/yii/framework/web/CController.php(782): ProductController->renderPartial()
+#2 /var/www/lab2/protected/controllers/ProductController.php(56): ProductController->render()
+#3 unknown(0): ProductController->actionView()
+#4 /home/ann/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /home/ann/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /home/ann/yii/framework/web/filters/CFilterChain.php(133): ProductController->runAction()
+#8 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/ann/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): ProductController->filterAccessControl()
+#11 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/ann/yii/framework/web/CController.php(265): ProductController->runActionWithFilters()
+#14 /home/ann/yii/framework/web/CWebApplication.php(282): ProductController->run()
+#15 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/lab2/index.php(13): CWebApplication->run()
+REQUEST_URI=/lab2/index.php?r=product/view&id=3
+in /var/www/lab2/protected/views/product/view.php (58)
+in /var/www/lab2/protected/controllers/ProductController.php (56)
+in /var/www/lab2/index.php (13)
+2014/03/09 04:27:25 [error] [php] Trying to get property of non-object (/var/www/lab2/protected/views/product/view.php:7)
+Stack trace:
+#0 /home/ann/yii/framework/web/CController.php(869): ProductController->renderFile()
+#1 /home/ann/yii/framework/web/CController.php(782): ProductController->renderPartial()
+#2 /var/www/lab2/protected/controllers/ProductController.php(193): ProductController->render()
+#3 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductController->actionUpdateMark()
+#4 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home/ann/yii/framework/web/filters/CFilterChain.php(133): ProductController->runAction()
+#6 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/ann/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): ProductController->filterAccessControl()
+#9 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/ann/yii/framework/web/CController.php(265): ProductController->runActionWithFilters()
+#12 /home/ann/yii/framework/web/CWebApplication.php(282): ProductController->run()
+#13 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/lab2/index.php(13): CWebApplication->run()
+REQUEST_URI=/lab2/index.php?r=product/updateMark
+in /var/www/lab2/protected/views/product/view.php (7)
+in /var/www/lab2/protected/controllers/ProductController.php (193)
+in /var/www/lab2/index.php (13)
+2014/03/09 04:31:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/lab2/protected/controllers/ProductController.php:191
+Stack trace:
+#0 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductController->actionUpdateMark()
+#1 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /home/ann/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('updateMark')
+#10 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/updateM...')
+#11 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/lab2/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/lab2/index.php?r=product/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/view&id=1
+---
+2014/03/09 04:31:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/lab2/protected/controllers/ProductController.php:191
+Stack trace:
+#0 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductController->actionUpdateMark()
+#1 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /home/ann/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('updateMark')
+#10 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/updateM...')
+#11 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/lab2/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/lab2/index.php?r=product/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/view&id=1
+---
+2014/03/09 04:32:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'T_T.' in /var/www/lab2/protected/controllers/ProductController.php:191
+Stack trace:
+#0 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductController->actionUpdateMark()
+#1 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /home/ann/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('updateMark')
+#10 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/updateM...')
+#11 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/lab2/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/lab2/index.php?r=product/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/view&id=1
+---
+2014/03/09 04:32:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message '1' in /var/www/lab2/protected/controllers/ProductController.php:191
+Stack trace:
+#0 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductController->actionUpdateMark()
+#1 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /home/ann/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('updateMark')
+#10 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/updateM...')
+#11 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/lab2/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/lab2/index.php?r=product/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/view&id=1
+---
+2014/03/09 04:33:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '2.6666666666667' in /var/www/lab2/protected/controllers/ProductController.php:191
+Stack trace:
+#0 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductController->actionUpdateMark()
+#1 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /home/ann/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('updateMark')
+#10 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/updateM...')
+#11 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/lab2/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/lab2/index.php?r=product/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/view&id=1
+---
+2014/03/09 04:33:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message '3' in /var/www/lab2/protected/controllers/ProductController.php:191
+Stack trace:
+#0 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductController->actionUpdateMark()
+#1 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /home/ann/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('updateMark')
+#10 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/updateM...')
+#11 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/lab2/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/lab2/index.php?r=product/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/view&id=1
+---
+2014/03/09 04:35:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message '3' in /var/www/lab2/protected/controllers/ProductController.php:192
+Stack trace:
+#0 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductController->actionUpdateMark()
+#1 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /home/ann/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('updateMark')
+#10 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/updateM...')
+#11 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/lab2/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/lab2/index.php?r=product/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/view&id=1
+---
+2014/03/09 04:35:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message '3' in /var/www/lab2/protected/controllers/ProductController.php:192
+Stack trace:
+#0 /home/ann/yii/framework/web/actions/CInlineAction.php(49): ProductController->actionUpdateMark()
+#1 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /home/ann/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('updateMark')
+#10 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/updateM...')
+#11 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/lab2/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/lab2/index.php?r=product/updateMark
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/view&id=1
+---
+2014/03/09 04:42:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/lab2/protected/controllers/ProductController.php:164
+Stack trace:
+#0 /var/www/lab2/protected/controllers/ProductController.php(55): ProductController->loadModel('1')
+#1 [internal function]: ProductController->actionView('1')
+#2 /home/ann/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ProductController), Array)
+#3 /home/ann/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProductController), Object(ReflectionMethod), Array)
+#4 /home/ann/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/ann/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/ann/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/ann/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/ann/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/ann/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/ann/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/ann/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/ann/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#13 /home/ann/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('product/view')
+#14 /home/ann/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/lab2/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/lab2/index.php?r=product/view&id=1
+HTTP_REFERER=http://localhost/lab2/index.php?r=product/index
+---

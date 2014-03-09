@@ -58,8 +58,8 @@ class ProductCategory extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'pid' => 'Идентификатор продукта',
-			'cid' => 'Идентификатор категории продукта',
+			'pid' => 'Продукт',
+			'cid' => 'Категория продукта',
 		);
 	}
 
@@ -99,5 +99,15 @@ class ProductCategory extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+
+	public function getProductName($data,$row)
+	{
+		return Product::model()->findByPk($data->pid)->name;
+	}
+
+	public function getCategoryName($data,$row)
+	{
+		return Category::model()->findByPk($data->cid)->name;
 	}
 }

@@ -13,11 +13,13 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('pid')); ?>:</b>
-	<?php echo CHtml::encode($data->pid); ?>
+	<?php echo 
+		CHtml::encode($data->p->name); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('cid')); ?>:</b>
-	<?php echo CHtml::encode($data->cid); ?>
+	<?php 
+		echo CHtml::encode($data->c->name); ?>
 	<br />
 
 

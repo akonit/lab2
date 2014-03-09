@@ -61,7 +61,7 @@ class Opinion extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'pid' => 'Идентификатор продукта',
-			'login' => 'Логин',
+			'login' => 'Никнейм',
 			'time' => 'Время',
 			'text' => 'Текст отзыва',
 		);
