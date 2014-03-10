@@ -30,8 +30,9 @@
 			$ct = Category::model()->findByPk($pct->cid);
 			$text_ct = $text_ct . $ct->name . ", ";
 		}
-		echo substr($text_ct, 0, strlen($text_ct) - 2);
+		echo CHtml::encode(substr($text_ct, 0, strlen($text_ct) - 2));
 		//echo CHtml::encode($data->getAttributeLabel('voters')); 
 	?></b>
+	<br />
 	<br />
 </div>

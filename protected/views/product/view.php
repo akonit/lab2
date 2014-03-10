@@ -25,8 +25,8 @@ $this->menu=array(
 		/*'id',*/
 		'name',
 		'description',
-		'mark',
-		/*'voters',*/
+		/*'mark',
+		'voters',*/
 	),
 )); ?>
 
@@ -45,18 +45,40 @@ $this->menu=array(
 
 <br />
 	<?php
-		$marks = array('1' => 'ужасно', '2' => 'плохо', '3' => 'средне', '4' => 'неплохо', '5' => 'отлично');
+		/*$marks = array('1' => 'ужасно', '2' => 'плохо', '3' => 'средне', '4' => 'неплохо', '5' => 'отлично');
 		$options = array(
 		    'uncheckValue' => null,
 			'ajax' => array('type'=>'POST'
 					,'url'=>CController::createUrl('product/updateMark') ,
                     			'data' => array(
                         			'mark' => 'js:this.value',
-						'model' => $model->id,)
+						'model' => $model->id,),
 					),
 		);
-		echo CHtml::activeRadioButtonList($model, 'mark', $marks, $options);
+		echo CHtml::activeRadioButtonList($model, 'mark', $marks, $options);*/
+
+/*
+				success: function(msg){
+				$("#rating > input").rating("readOnly", true);
+				alert("Голос засчитан!");                      
+				}}
+*/
+
+		$this->widget("CStarRating", array(
+				"name" => $model->name,
+				/*"id" => $model->id,
+				"value" => $model->mark,*/
+				"readOnly" => false,
+				'callback'=>'
+				function(){
+				$.ajax({
+				type: "POST",
+				url: "'.Yii::app()->createUrl('product/updateMark').'",
+				data: "id='.$model->id.'&mark=" + $(this).val(),)}'
+
+			    ));
 	?>
+<br />
 <br />
 
 <h3>-----------------------------</h3>

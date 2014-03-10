@@ -1,5 +1,6 @@
 <?php
 
+
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Отзывы о товарах',
@@ -27,8 +28,8 @@ return array(
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=PRODUCTS',
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => 'password',
+			'username' => 'lab2',
+			'password' => '16',
 			'charset' => 'utf8',
 		),
 

@@ -129,7 +129,15 @@ class ProductController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Product');
+		$criteria = new CDbCriteria();
+
+		if(isset($_GET['q']))
+		{
+		    $q = $_GET['q'];
+		    $criteria->compare('description', $q, true, 'AND');
+		}
+
+		$dataProvider=new CActiveDataProvider('Product', array('criteria'=>$criteria));
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -179,17 +187,16 @@ class ProductController extends Controller
 	}
 
 	public function actionUpdateMark() 
-	{
-		$mark = Yii::app()->request->getPost('mark');
-		$id = Yii::app()->request->getPost('model');
-		$model=Product::model()->findByPk($id);
-		$model->mark = ($model->mark * $model->voters + $mark) / ($model->voters + 1);
-		$model->voters = $model->voters + 1;
-		if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
-
-		$this->render('view',array(
-			'model'=>$model,
-		));
+		{
+			if(Yii::app()->request->isAjaxRequest){
+			$mark = Yii::app()->request->getPost('mark');
+			if(isset($_POST['id'])){ 
+				$model = $this->loadModel($_POST['id']);
+				$model->mark = ($model->mark * $model->voters + $mark) / ($model->voters + 1);
+				$model->voters = $model->voters + 1;
+				$model->save();
+			}
+		}
+		$this->refresh();
 	}
 }
