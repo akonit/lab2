@@ -197,6 +197,5 @@ class ProductController extends Controller
 				$model->save();
 			}
 		}
-		$this->refresh();
 	}
 }
